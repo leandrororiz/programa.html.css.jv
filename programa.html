@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão com Imagem</title>
+    <style>
+        #area {
+            width: 500px;
+            height: 500px;
+            color: rgb(0, 125, 235);
+            background-color: red;
+            font-size: 18px;
+            text-align: center;
+            line-height: 200px;
+            background-image: url(); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-left: 35%;
+            
+        }     
+    </style>
+</head>
+<body>
+    <div id="area">Cartão Vermelho</div>
+
+    <script>
+        var area = document.getElementById("area");
+
+        area.addEventListener("click", clicar);
+        area.addEventListener("mouseenter", entrar);
+        area.addEventListener("mouseleave", sair);
+
+        function clicar() {
+            area.innerText = "Messi!!";
+            area.style.backgroundImage = 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdgoJvlK-8ghkZXFUpkLe-DtFJ_Xxnkr5Muw&s)'
+        }
+
+        function entrar() {
+            area.innerText = "Ronaldinho Gaucho!!";
+            area.style.backgroundImage = 'url(https://upload.wikimedia.org/wikipedia/commons/c/cb/Ronaldinho061115.jpg)';
+         
+        }
+
+        function sair() {
+            area.innerText = "Cristiano Ronaldo!!";
+            area.style.backgroundImage = 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg/640px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg)'
+        }
+    </script>
+</body>
+</html>
